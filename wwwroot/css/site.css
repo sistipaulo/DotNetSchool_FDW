@@ -1,0 +1,49 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.display-4 {
+    font-weight: 600;
+    color: red;
+}
+
+.nav-item {
+    transition: ease-in-out 0.2s;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+    
+}
+
+.nav-link:hover {
+    color: aquamarine !important;
+}
+
+.create-btn {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.create-btn:hover {
+    color: #FFF;
+}
+
+.title-top{
+    padding: 1rem 0;
+}
