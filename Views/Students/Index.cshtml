@@ -36,9 +36,9 @@
                 <td class="align-middle">
                 @Html.DisplayFor(modelItem => item.GuardianName)
             <td>
-                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a> |
-                    <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-info-circle"></i></a> |
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash-fill"></i></a>
+                    <a class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Editar" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a> |
+                    <a class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Detalhes" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-info-circle"></i></a> |
+                    <a class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Excluir" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash-fill"></i></a>
             </td>
         </tr>
 }

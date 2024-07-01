@@ -1,13 +1,13 @@
 ﻿@model DotNetSchool.Models.Student
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
-<h1>Details</h1>
+<h1>Detalhes</h1>
 
 <div>
-    <h4>Student</h4>
+    <h4>Aluno</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -43,6 +43,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Editar" asp-action="Edit" asp-route-id="@Model?.Id"><i class="bi bi-pencil-square"></i></a>
+    <a class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Voltar" asp-action="Index"><i class="bi bi-arrow-counterclockwise"></i></a>
 </div>

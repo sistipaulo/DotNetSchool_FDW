@@ -47,3 +47,21 @@ body {
 .title-top{
     padding: 1rem 0;
 }
+
+#loader {
+    position: fixed; /* Define o posicionamento fixo para o loader */
+    top: 50%; /* Define o topo como 50% da altura da tela */
+    left: 50%; /* Define a esquerda como 50% da largura da tela */; /* Usa transform para centralizar o elemento */
+    z-index: 1000; /* Define um índice z alto para garantir que esteja na frente de outros elementos */
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none; /* Ocultar por padrão */
+    z-index: 999; /* Índice z alto para garantir que esteja acima de outros elementos */
+}

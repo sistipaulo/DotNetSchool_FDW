@@ -1,12 +1,19 @@
 ﻿@model DotNetSchool.Models.Student
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastrar";
 }
 
-<h1>Create</h1>
+<div id="overlay"></div> <!-- Fundo escuro -->
 
-<h4>Student</h4>
+<div id="loader" class="spinner-border text-primary" role="status" style="display: none;">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+
+<h1>Cadastrar</h1>
+
+<h4>Aluno</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -38,14 +45,26 @@
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <button type="submit" id="liveToastBtn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Salvar" class="btn btn-primary mt-3">
+                    <i class="bi bi-save"></i>
+                </button>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <img src="..." class="rounded me-2" alt="...">
+                            <strong class="me-auto">Bootstrap</strong>
+                            <small>11 mins ago</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Aluno adicionado com sucesso!.
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-secondary mt-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Voltar" asp-action="Index"><i class="bi bi-arrow-counterclockwise"></i></a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
